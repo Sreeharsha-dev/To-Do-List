@@ -1,0 +1,100 @@
+
+body {
+	background: linear-gradient(to bottom, #C6F3FF, #A9E8E5, #BAFFE8, #A9CAE8);
+	background-size: 400% 400%;
+}
+
+.btn-add-task {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Custom CSS for the to-do list website */
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-shadow: 2px 2px #000;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #fff;
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus + label {
+  top: 0;
+  font-size: 0.8rem;
+  opacity: 1;
+}
+
+.btn-primary {
+  background-color: #ff758c;
+  border-color: #ff758c;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #ff7eb3;
+  border-color: #ff7eb3;
+}
+
+.list-group-item {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-group-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 5px;
+  height: 100%;
+  background-color: #ff758c;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-group-item:hover::before {
+  opacity: 1;
+  left: 0;
+}
+
+.list-group-item::after {
+  content: "X";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #ff758c;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-group-item:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) rotate(45deg);
+}
